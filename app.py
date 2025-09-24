@@ -6,6 +6,7 @@ from sklearn.preprocessing import StandardScaler
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
 application=Flask(__name__)
+application.config['DEBUG'] = False
 
 app=application
 
@@ -38,7 +39,7 @@ def predict_datapoint():
         print("Mid Prediction")
         results=predict_pipeline.predict(pred_df)
         print("after Prediction")
-        return render_template('home.html',results=results[0])
+        return render_template('home.html',results=results)
     
 
 if __name__=="__main__":
