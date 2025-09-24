@@ -43,7 +43,7 @@ class DataTransformation:
                 ("scaler",StandardScaler())
 
                 ]
-            ) 
+            )
 
             cat_pipeline=Pipeline(
 
